@@ -80,8 +80,3 @@ Local Docker build and run:
 docker build -t env-request-viewer:local .
 docker run --rm -p 8080:8080 -e EXAMPLE_VAR=hello env-request-viewer:local
 ```
-
-Publishing (CI):
-
-- GitHub Actions workflow `.github/workflows/dockerhub-publish.yml` builds and pushes multi-arch images to `docker.io/hasanuzun/env-request-viewer` on pushes to `master` and on version tags (e.g., `v1.2.3`).
-- Requires one secret in the repo: `DOCKERHUB_TOKEN` (create in Docker Hub → Account Settings → Security).
